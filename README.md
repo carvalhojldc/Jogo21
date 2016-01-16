@@ -20,3 +20,7 @@ No turno do jogador máquina, uma nova carta será selecionada aleatoriamente e 
 Caso o jogador humano escolha encerrar a partida, ela será encerrada logo após o jogador máquina selecionar sua última carta, ou seja, o jogador máquina irá selecionar apenas mais uma carta após o jogador humano decretar o fim da rodada.
 
 A partida também poderá ser encerrada automaticamente caso algum dos jogadores exceda os 21 pontos ou atinja essa marca. Após isso, o jogo procederá para a divulgação do resultado da partida. Com os resultados dispostos, o jogador humano é questionado se deseja uma nova partida. Em caso afirmativo, uma nova terá início. Caso contrário, o programa será encerrado.
+
+__
+
+Esta tafera foi proposta pelo professor Alyppyo Coutinho, DIMAP - UFRN.
