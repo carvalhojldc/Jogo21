@@ -75,17 +75,9 @@ void statusJogo(struct jogo * jogoAtual) {
     
     printf("############# 21 #############");
     printf("\n> Jogador Humano: %d pontos", jogoAtual->jHumano.pontos);
-    /*printf("\nCartas: ");
-    for(i=0;i<jogoAtual->jHumano.qntCartas; i++) {
-        printf(" %s ", jogoAtual->jHumano.cartas[i]->simbolo);
-    }*/
     desenharPilha(jogoAtual->jHumano.cartas, jogoAtual->jHumano.qntCartas);
     
     printf("\n> Jogador Máquina: %d pontos", jogoAtual->jMaquina.pontos);
-    /*printf("\nCartas: ");
-    for(i=0;i<jogoAtual->jMaquina.qntCartas; i++) {
-        printf(" %s ", jogoAtual->jMaquina.cartas[i]->simbolo);
-    }*/
     desenharPilha(jogoAtual->jMaquina.cartas, jogoAtual->jMaquina.qntCartas);    
 
 }
@@ -136,10 +128,6 @@ int valorCarta(int carta) {
         valor real dela seja retornado [1,13]
      */
     
-    /* if(carta <= 13)   Cartas Paus 
-        só retorna
-     */
-       
     if(carta >= 14 && carta <= 26) { /* Cartas Ouros */
         carta = carta - 13;
     } else if(carta >= 27 && carta <= 39) { /* Cartas Copas */
@@ -301,14 +289,6 @@ void salvaJogadaJ(struct jogo *Jogo, struct carta *CartaJogador) {
     
     Jogo->jHumano.cartas[i] = &CartaJogador[i];
     /* Salvando os dados em jHumano*/
-
-    /*
-    printf("\n>> HUMANO __");
-    printf("\n<debug> i=%d  carta= %d - valorCarta= %d", i, carta, valor_carta);
-    printf("\n<debug> valor_carta= %d %s ", Jogo->jHumano.cartas[i]->valor, Jogo->jHumano.cartas[i]->simbolo);
-    printf(" pontos= %d ", Jogo->jHumano.pontos);
-    printf(" qntCartas= %d ", Jogo->jHumano.qntCartas);
-     * */
    
 }
 
@@ -359,13 +339,5 @@ void salvaJogadaM(struct jogo *Jogo, struct carta *CartaMaquina) {
     
     Jogo->jMaquina.cartas[i] = &CartaMaquina[i];
     /* Salvando os dados em jHumano*/
-
-    /*
-    printf("\n>> MAQUINA __");
-    printf("\n<debug> i=%d  carta= %d - valorCarta= %d", i, carta, valor_carta);
-    printf("\n<debug> valor_carta= %d %s ", Jogo->jMaquina.cartas[i]->valor, Jogo->jMaquina.cartas[i]->simbolo);
-    printf(" pontos= %d ", Jogo->jMaquina.pontos);
-    printf(" qntCartas= %d ", Jogo->jMaquina.qntCartas);    
-*/
    
 }
