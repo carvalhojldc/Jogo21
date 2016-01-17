@@ -16,6 +16,7 @@ void inicia(struct jogo *Jogo) {
 int main() {
 
     int i;
+    bool jogada;
 
     struct jogo Jogo;
     struct carta *Carta;
@@ -28,13 +29,7 @@ int main() {
     CartaMaquina = (struct carta*)malloc(12 * sizeof(struct carta));
     
     geraBaralho(Carta, &Jogo);
-    /* for(i=0; i<52; i++) { //< debug >
-        printf("\n<debug> v = %d tip = %s", Jogo.baralho[i]->valor, Jogo.baralho[i]->simbolo);
-    }*/
-    
-    
-    bool jogada;
-    
+
     do {
         
         inicia(&Jogo);
@@ -61,9 +56,6 @@ int main() {
 
         statusJogo(&Jogo);
         divulgarResultado(&Jogo);
-
-        //debugMaquina(Jogo);
-        //debugHumano(Jogo);
         
     } while(novaJogada(2));
 
